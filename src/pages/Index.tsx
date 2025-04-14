@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Maximize, Minimize, ArrowRight } from 'lucide-react';
 import HealingFlow from '../components/HealingFlow';
@@ -157,7 +158,7 @@ const Index = () => {
                     ENI use case - Cell downtime anomaly
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="bg-[#232323] border-[#444] w-[60vw] max-w-[800px] p-0 overflow-hidden">
+                <SheetContent side="right" className="bg-[#232323] border-[#444] w-[75vw] p-0 overflow-hidden transition-all duration-300 ease-in-out">
                   <SheetHeader className="px-4 py-3 border-b border-[#444]">
                     <SheetTitle className="text-white">Erica - Cell Downtime Analysis</SheetTitle>
                   </SheetHeader>
