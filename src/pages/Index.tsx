@@ -13,17 +13,17 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<string>("ENI");
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
+  const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -150,29 +150,29 @@ const Index = () => {
               </p>
             </div>
             
-            {/* New use case box with arrow and dialog trigger */}
+            {/* New use case box with arrow and sidebar trigger */}
             <div className="mt-4 relative">
-              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-                <DialogTrigger asChild>
+              <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+                <SheetTrigger asChild>
                   <Button variant="outline" className="w-full justify-start bg-transparent text-white border-white/20 hover:bg-white/10">
                     ENI use case - Cell downtime anomaly
                   </Button>
-                </DialogTrigger>
-                <DialogContent className="bg-[#232323] border-[#444] w-[90vw] max-w-[90vw] h-[80vh] max-h-[80vh]">
-                  <DialogHeader>
-                    <DialogTitle className="text-white">Erica - Cell Downtime Analysis</DialogTitle>
-                  </DialogHeader>
-                  <div className="w-full h-full mt-2">
+                </SheetTrigger>
+                <SheetContent side="right" className="bg-[#232323] border-[#444] w-[60vw] max-w-[800px] p-0 overflow-hidden">
+                  <SheetHeader className="px-4 py-3 border-b border-[#444]">
+                    <SheetTitle className="text-white">Erica - Cell Downtime Analysis</SheetTitle>
+                  </SheetHeader>
+                  <div className="w-full h-full">
                     <iframe 
                       src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/genai-hw-proj/apps/chat?query=thrisdf&assistant=Erica" 
-                      className="w-full h-full border-0"
+                      className="w-full h-[calc(100vh-70px)] border-0"
                       title="Erica Assistant"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       sandbox="allow-scripts allow-same-origin allow-forms"
                     />
                   </div>
-                </DialogContent>
-              </Dialog>
+                </SheetContent>
+              </Sheet>
               <div className="absolute -right-16 top-1/2 transform -translate-y-1/2">
                 <ArrowRight className="h-8 w-16 text-white" />
               </div>
