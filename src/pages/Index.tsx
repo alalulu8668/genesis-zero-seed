@@ -157,7 +157,7 @@ const Index = () => {
                   </SheetHeader>
                   <div className="w-full h-full">
                     <iframe 
-                      src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/test-d15/apps/chat/?server=https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se&service_id=test-d15/chatbot:elia-chatbot&upload_workspace=test-d15&assistant=Electra&query=what%20is%20COM%20requirement?" 
+                      src="http://localhost:9527/cs-test/apps/chat/?server=http://localhost:9527&service_id=cs-test/chatbot:elia-chatbot&assistant=Erica&query=Troubleshoot%20the%20top%20cell%20downtime%20issues%20in%20the%20last%2015%20mins"  
                       className="w-full h-[calc(100vh-70px)] border-0"
                       title="Electra Assistant"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
