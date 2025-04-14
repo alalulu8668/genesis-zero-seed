@@ -12,10 +12,18 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<string>("ENI");
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -142,11 +150,29 @@ const Index = () => {
               </p>
             </div>
             
-            {/* New use case box with arrow */}
+            {/* New use case box with arrow and dialog trigger */}
             <div className="mt-4 relative">
-              <Button variant="outline" className="w-full justify-start bg-transparent text-white border-white/20 hover:bg-white/10">
-                ENI use case - Cell downtime anomaly
-              </Button>
+              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="w-full justify-start bg-transparent text-white border-white/20 hover:bg-white/10">
+                    ENI use case - Cell downtime anomaly
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="bg-[#232323] border-[#444] w-[90vw] max-w-[90vw] h-[80vh] max-h-[80vh]">
+                  <DialogHeader>
+                    <DialogTitle className="text-white">Erica - Cell Downtime Analysis</DialogTitle>
+                  </DialogHeader>
+                  <div className="w-full h-full mt-2">
+                    <iframe 
+                      src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/genai-hw-proj/apps/chat?query=thrisdf&assistant=Erica" 
+                      className="w-full h-full border-0"
+                      title="Erica Assistant"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      sandbox="allow-scripts allow-same-origin allow-forms"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
               <div className="absolute -right-16 top-1/2 transform -translate-y-1/2">
                 <ArrowRight className="h-8 w-16 text-white" />
               </div>
