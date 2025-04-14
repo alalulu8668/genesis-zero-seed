@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Maximize, Minimize, ArrowRight } from 'lucide-react';
 import HealingFlow from '../components/HealingFlow';
@@ -164,9 +163,9 @@ const Index = () => {
                   </SheetHeader>
                   <div className="w-full h-full">
                     <iframe 
-                      src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/genai-hw-proj/apps/chat?query=thrisdf&assistant=Erica" 
+                      src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/test-d15/apps/chat/?server=https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se&service_id=test-d15/chatbot:elia-chatbot&upload_workspace=test-d15&assistant=Electra" 
                       className="w-full h-[calc(100vh-70px)] border-0"
-                      title="Erica Assistant"
+                      title="Electra Assistant"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       sandbox="allow-scripts allow-same-origin allow-forms"
                     />
