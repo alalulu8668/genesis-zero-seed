@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 222.2 47.4% 11.2%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -96,6 +96,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply font-sans bg-[#1A1F2C] text-foreground;
   }
+}
+
+.purple-path {
+  stroke: #BA8FFF;
+  stroke-width: 15px;
+  fill: none;
+}
+
+.flow-node {
+  background: #222222;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.healing-flow-text {
+  color: white;
+  font-weight: 300;
 }

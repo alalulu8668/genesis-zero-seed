@@ -61,6 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				ericsson: {
+					blue: '#0021A0',
+					darkBlue: '#1A1F2C',
+					lightBlue: '#0063E8',
+					purple: '#BA8FFF',
+					darkGray: '#222222',
+					textBlue: '#0021A0',
+					gray: '#F0F3F5',
+					lightGray: '#F8FAFC',
+					darkBackground: '#1A1F2C',
+					white: '#FFFFFF'
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,28 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				},
+				'slide-right': {
+					from: { transform: 'translateX(-100%)' },
+					to: { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-right': 'slide-right 0.5s ease-out'
+			},
+			fontFamily: {
+				'ericsson': ['Arial', 'Helvetica', 'sans-serif'],
+				'sans': ['Open Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif'],
+			},
+			backgroundImage: {
+				'healing-gradient': 'linear-gradient(90deg, #BA8FFF 0%, #D6BCFA 100%)'
 			}
 		}
 	},
