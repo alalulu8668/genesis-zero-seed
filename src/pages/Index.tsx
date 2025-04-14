@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Maximize, Minimize, ArrowRight } from 'lucide-react';
 import HealingFlow from '../components/HealingFlow';
@@ -45,7 +44,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#232323] text-white">
-      {/* Top header bar */}
       <header className="w-full py-4 px-6 bg-[#111111] border-b border-gray-800 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6">
@@ -72,7 +70,6 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Subheader navigation */}
       <div className="bg-[#1A1A1A] border-b border-gray-800 flex items-center">
         <div className="flex items-center py-3 px-6 gap-2 border-r border-gray-800">
           <div className="w-5 h-5">
@@ -89,7 +86,6 @@ const Index = () => {
         </div>
         <div className="h-8 w-[2px] bg-[#0063E8] mx-4"></div>
         
-        {/* Navigation Menu */}
         <NavigationMenu className="max-w-none">
           <NavigationMenuList className="bg-transparent">
             <NavigationMenuItem>
@@ -139,9 +135,7 @@ const Index = () => {
           <h1 className="text-3xl font-light">Autonomous network incident management flow</h1>
         </div>
 
-        {/* Main content grid */}
         <div className="grid grid-cols-12 gap-8">
-          {/* Left column - Introduction */}
           <div className="col-span-3">
             <h2 className="text-2xl font-light mb-4">Maintain high availability</h2>
             <div className="p-4 bg-[#232323] backdrop-blur">
@@ -150,7 +144,6 @@ const Index = () => {
               </p>
             </div>
             
-            {/* New use case box with arrow and sidebar trigger */}
             <div className="mt-4 relative">
               <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild>
@@ -164,7 +157,7 @@ const Index = () => {
                   </SheetHeader>
                   <div className="w-full h-full">
                     <iframe 
-                      src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/test-d15/apps/chat/?server=https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se&service_id=test-d15/chatbot:elia-chatbot&upload_workspace=test-d15&assistant=Electra" 
+                      src="https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se/test-d15/apps/chat/?server=https://hypha-gaia-8495.azeuslx0056.eus.az.ericsson.se&query=what%20is%20COM%20requirement?&service_id=test-d15/chatbot:elia-chatbot&upload_workspace=test-d15&assistant=Electra" 
                       className="w-full h-[calc(100vh-70px)] border-0"
                       title="Electra Assistant"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -179,7 +172,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Center column - Flow diagram */}
           <div className="col-span-6">
             {activeTab === "ENI" ? (
               <HealingFlow />
@@ -190,7 +182,6 @@ const Index = () => {
             )}
           </div>
 
-          {/* Right column - Optimization rApps */}
           <div className="col-span-3">
             <h2 className="text-2xl font-light mb-4">Mitigating cell downtime</h2>
             
